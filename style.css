@@ -36,7 +36,7 @@ top: 0;
 left: 0;
 }
 body{
-   
+    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
     color: #333;
     background-color: #f7f9fc;
     scroll-behavior: smooth;
@@ -180,6 +180,7 @@ margin: 0 auto;
 
 
 .wrapper {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
     background-color:  #FCCAD1;
     padding: 50px 0;
     justify-content: center;
@@ -894,6 +895,186 @@ margin: 0 auto;
     justify-content: center; /* Alinha horizontalmente no centro */
     align-items: center; /* Alinha verticalmente no centro */
 }
+
+/* Estilo básico para telas grandes (desktops, tablets em paisagem) - telas com largura superior a 1024px */
+@media (min-width: 1025px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card {
+        width: 23%;
+        margin: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para telas médias (tablets em modo retrato e telas de tamanho médio) - telas de 768px até 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para telas pequenas (smartphones em modo paisagem) - telas de 481px até 767px */
+@media (max-width: 767px) and (min-width: 481px) {
+    .container {
+        padding: 15px;
+    }
+
+    .card {
+        width: 48%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas muito pequenas (smartphones em modo retrato e dispositivos com telas pequenas) - telas de 480px ou menos */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .imagem-container {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Estilos para telas de alta resolução (dispositivos com telas de retina) - telas com densidade de pixels maior que 192dpi */
+@media only screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .container {
+        padding: 25px;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 22%;
+    }
+
+    .custom-button {
+        padding: 12px 20px;
+    }
+}
+
+/* Estilos para telas de ultra largura (monitores widescreen ou ultrawide) - telas de 1440px ou mais */
+@media (min-width: 1440px) {
+    .container {
+        padding: 40px;
+    }
+
+    .card {
+        width: 20%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+}
+
 
 
 
