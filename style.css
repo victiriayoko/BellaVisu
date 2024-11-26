@@ -91,7 +91,6 @@ margin: 0 auto;
 .hero {
     background: linear-gradient(to right, rgba(255, 182, 193, 0.7), rgba(251, 232, 112, 0.7)), 
         url('https://source.unsplash.com/1600x900/?spa,relax') no-repeat center center/cover;
-    background-repeat: no-repeat;
     color: #fff;
     padding: 150px 20px;
     text-align: center;
@@ -897,190 +896,884 @@ margin: 0 auto;
     align-items: center; /* Alinha verticalmente no centro */
 }
 
-/* Estilo básico para telas grandes (desktops, tablets em paisagem) - telas com largura superior a 1024px */
-@media (min-width: 1025px) {
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .menu {
-        display: flex;
-        gap: 20px;
-    }
-
-    .card {
-        width: 23%;
-        margin: 15px;
-    }
-
-    .hero {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-}
-
-/* Estilos para telas médias (tablets em modo retrato e telas de tamanho médio) - telas de 768px até 1024px */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 1080px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .card {
-        width: 45%;
-        margin: 10px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .menu a {
-        font-size: 16px;
-    }
-}
-
-/* Estilos para telas pequenas (smartphones em modo paisagem) - telas de 481px até 767px */
-@media (max-width: 767px) and (min-width: 481px) {
-    .container {
-        padding: 15px;
-    }
-
-    .card {
-        width: 48%;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    .menu a {
-        font-size: 14px;
-    }
-}
 
 /* Estilos para telas muito pequenas (smartphones em modo retrato e dispositivos com telas pequenas) - telas de 480px ou menos */
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
+@media screen and (max-width:440) {
+
+    body{
+        width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+        color: #333;
+        background-color: #f7f9fc;
+        scroll-behavior: smooth;
+    }
+    
+    html{
+        scroll-behavior: smooth;
     }
 
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu a {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 12px;
-    }
-
-    .card {
+    header{
+        background-color: #FCCAD1;
         width: 100%;
-        margin: 8px 0;
-    }
+        height: 90%;
+        top: 0;
+        left: 0;
+        font-size: 5px;
+        display: flex;
+        }
+       
+        .container{
+        max-width: 1080px;
+        display: flex;
+        font-size: 5px;
+        align-items: center;
+        margin: 0 auto;
+        }
+        
+        .logo img{
+            width: 200px;
+            
+            
+        }
+        
+        .logo{
+            width: 15%;
+            cursor: pointer;
+        }
+        
+        .menu nav a{
+            color: #e43798;
+            text-decoration: none;
+            padding-right: 30px;
+            font-size: 5px;
+            position: relative;
+        }
+        
+        .menu nav a::after{
+            content: " ";
+            width: 0px;
+            height: 4px;
+            background-image: linear-gradient(#e43798, #e43798);
+            position: absolute;
+            top: 25px;
+            left: 0;
+            transition: width 0.5s;
+        }
+        
+        .menu nav a:hover::after{
+            width: 50px;
+        }
+        
+        .hero {
+            background: linear-gradient(to right, rgba(255, 182, 193, 0.7), rgba(251, 232, 112, 0.7)), 
+                url('https://source.unsplash.com/1600x900/?spa,relax') no-repeat center center/cover;
+            color: #fff;
+            padding: 150px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #8a8989;
+        }
+        
+        .hero p {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #e43798; /* Cor #e43798 */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .custom-button {
+            display: inline-block; /* Permite tratar o link como um botão */
+            background-color: transparent; /* Fundo rosa */
+            color: #000000; /* Texto branco */
+            text-decoration: none; /* Remove o sublinhado do link */
+            border: 2px solid #e43798; /* Cor da borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 30px; /* Bordas arredondadas */
+            font-size: 16px; /* Tamanho do texto */
+            font-weight: bold; /* Texto em negrito */
+            text-align: center; /* Centraliza o texto */
+            transition: all 0.3s ease; /* Animação suave ao passar o mouse */
+        }
+        
+        .custom-button:hover {
+            background-color: #d12687; /* Tom mais escuro ao passar o mouse */
+            color: #fff; /* Garante que o texto continue branco */
+        }
+        
+        
+        
+        
+        
+        .tituloum{
+            padding: 0 24px;
+            padding-top: 64px;
+            top: 20%;
+            color: #8E94A2;
+            margin: 0 auto; 
+            margin-top: 15px;
+        }
+        
+        .textoum{
+            padding: 0 24px;
+        }
+        
+        .texto{
+            display: flex;       /* Organiza os textos lado a lado */
+            gap: 0px;           /* Espaço entre os textos */
+                
+        }
+        
+        .textodois{
+            font-size: 18px;
+            display: flex;
+        }
+        
+        .inicial::first-letter {
+            font-size: 2em;         /* Tamanho grande para a primeira letra */
+            font-weight: bold;      /* Negrito para dar destaque */
+            color: #e43798;         /* Cor de destaque */
+        }
+        .primeira-letra {
+            font-size: 1.2em;            /* Tamanho normal do texto */
+            line-height: 1.2;            /* Altura das linhas do texto */
+        }
+        
+        .primeira-letra::first-letter {
+            font-size: 2.8em;              /* Tamanho grande para a primeira letra */
+            font-weight: bold;           /* Deixa a letra em negrito */
+            color: #e43798;              /* Cor da primeira letra */
+            float: left;                 /* Faz a primeira letra flutuar à esquerda */
+            line-height: .8;            /* Ajusta a altura da linha para que ocupe duas linhas */
+            margin-right: 2px;           /* Espaço entre a primeira letra e o resto do texto */
+            margin-top: -5px;            /* Ajusta a posição vertical da letra */
+        }
+        
+        
+        
+        
+        .wrapper {
+            width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+            background-color:  #FCCAD1;
+            padding: 50px 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            display: flex; 
+            margin: 0 auto; 
+            margin-top: 110px;
+        }
+        
+        
+        .butt {
+            text-decoration: none;
+            background-color: transparent; 
+            border: 2px solid #fff;        /* Borda visível */
+            color: #fff;                   /* Cor do texto */
+            font-size: 12px;               /* Tamanho do texto */
+            padding: 10px 2%;            /* Ajuste do espaçamento interno */
+            border-radius: 5px;            /* Bordas arredondadas, se desejar */
+            cursor: pointer;               /* Mostra o cursor de mão ao passar */
+            transition: all 0.3s ease;
+            margin-left: 15px     /* Suaviza a transição no hover */
+            
+        }
+        
+        .butt:hover {
+            background-color: rgba(0, 0, 0, 0.05); /* Leve fundo no hover */
+            color: #8a8989;                           /* Altera cor do texto no hover */
+            border-color: #8a8989;                    /* Altera cor da borda no hover */
+        }
+        
+        .titulodois{
+            padding: 0 24px;
+            padding-top: 64px;
+            top: 20%;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            color: #8E94A2;
+        
+        }
+        
+        
+        
+        .linha-solida {
+            display: flex;
+            margin: 20px auto; 
+            width: 48px;        /* Largura total da linha */
+            height: 2px;        /* Espessura da linha */
+        }
+        
+        .metade-preta {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: black;
+        }
+        
+        .metade-branca {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: rgb(214, 211, 211);
+        }
+        
+        .linha-solidaa {
+            display: flex;
+            
+            width: 48px;        /* Largura total da linha */
+            height: 2px;        /* Espessura da linha */
+        }
+        
+        .metade-pretaa {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: black;
+        }
+        
+        .metade-brancaa {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: #c0c4cd;
+        }
+        
+        
+        .titulotres{
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .card {
+            border: none;         /* Remove a borda */
+            box-shadow: none;     /* Remove a sombra */
+            padding: 20px;        /* Adiciona espaçamento interno (dentro da card) */
+            margin: 15px;         /* Adiciona espaçamento externo (afasta a card da borda) */
+            background-color: #f7f9fc;
+        }
+        
+        .card-body {
+            padding-left: 0; /* Remove o padding à esquerda */
+            padding-right: 15px; /* Ajusta o padding à direita */
+            padding-top: 10px;
+            padding-bottom: 15px;
+            display: flex; /* Flexbox para os itens dentro do card */
+            flex-direction: column; /* Organiza os itens verticalmente */
+        }
+        
+        .card-title {
+            display: flex; /* Usa flexbox para o layout */
+            align-items: center; /* Alinha o número e o título verticalmente */
+            justify-content: flex-start; /* Garante que o número e o título fiquem alinhados à esquerda */
+            font-size: 1em; /* Garante que o título tenha o mesmo tamanho do número */
+        }
+        
+        .numero {
+            color: #e43798; /* Defina a cor dos números aqui (rosa ou qualquer cor desejada) */
+            font-weight: bold; /* Deixa os números mais em destaque */
+            display: inline-block; /* Faz o número e o texto ficarem na mesma linha */
+            margin-bottom: 5px; /* Adiciona espaçamento entre a imagem e o número */
+            justify-content: center;
+            text-align: center;
+        }
+        
+        
+        
+        .card-img-top {
+            margin-bottom: 10px; /* Adiciona um pequeno espaçamento entre a imagem e o título */
+            border-radius: 4px; /* Adiciona bordas arredondadas à imagem */
+        }
+        
+        .linhas-duas-cores {
+            border: none;                               /* Remove a borda padrão */
+            height: 2px;                                /* Espessura da linha */
+            background: linear-gradient(to right, 
+                        #000000 50%, #a0a0a0 50%);      /* Gradiente com preto e cinza */
+            width: 48px;                                 /* Largura da linha (ajuste conforme necessário) */
+            margin: 10px 0;                          /* Centraliza a linha horizontalmente */
+        }
+        
+        .butt {
+            text-decoration: none;
+            background-color: transparent; 
+            border: 2px solid #fff;        /* Borda visível */
+            color: #fff;                   /* Cor do texto */
+            font-size: 12px;               /* Tamanho do texto */
+            padding: 10px 2%;            /* Ajuste do espaçamento interno */
+            border-radius: 5px;            /* Bordas arredondadas, se desejar */
+            cursor: pointer;               /* Mostra o cursor de mão ao passar */
+            transition: all 0.3s ease;
+            margin-left: 15px     /* Suaviza a transição no hover */
+            
+        }
+        
+        .butt:hover {
+            background-color: rgba(0, 0, 0, 0.05); /* Leve fundo no hover */
+            color: #8a8989;                           /* Altera cor do texto no hover */
+            border-color: #8a8989;                    /* Altera cor da borda no hover */
+        }
+        .btn-primary{
+            background-color: transparent;
+            border: 2px solid #e43798;
+            color: #e43798;
+            border-radius: 5px; 
+            margin: 20px;
+            margin-left: 95px;
+            cursor: pointer; 
+            transition: all 0.20s ease;
+             
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent; 
+            color: #727070;                           
+            border: 2px solid #727070;                  
+        }
+        
+        .hidden{
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        
+        .show{
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+            transition: all 1s;
+        }
+        
+        .imagens{
+            margin: 5px;
+        }
+        
+        .essamerda{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .essamerda :nth-last-child(1){
+            transition-delay: 800ms;
+        }
+        
+        .modal-content {
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+            background-color: #ffffff; /* Fundo branco */
+            padding: 20px; /* Espaçamento interno */
+        }
+        
+        .modal-header {
+            border: none; /* Remove borda no topo */
+            padding-bottom: 0; /* Remove espaçamento extra */
+        }
+        
+        .modal-title {
+            color: #e43798; /* Destaque rosa */
+            font-weight: bold; /* Título mais chamativo */
+            font-size: 1.5em; /* Aumenta o tamanho do título */
+            margin-bottom: 10px; /* Pequeno espaço antes do texto */
+        }
+        
+        .modal-body {
+            font-size: 1rem; /* Texto legível */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            color: #333; /* Cor do texto */
+            padding: 0; /* Remove espaçamento interno extra */
+        }
+        
+        .modal-footer {
+            display: flex; /* Layout flexível */
+            justify-content: space-between; /* Botões nas extremidades */
+            align-items: center; /* Centraliza verticalmente */
+            margin-top: 10px; /* Pequeno espaço entre texto e rodapé */
+            padding: 0; /* Remove padding extra */
+            border-top: none; /* Remove linha divisória no rodapé */
+        }
+        
+        /* Estilo para o botão personalizado */
+        .primary {
+            text-decoration: none;
+            background-color: #e43798; /* Rosa elegante */
+            color: white; /* Cor do texto */
+            font-size: 1rem; /* Tamanho do texto */
+            padding: 10px 20px; /* Espaçamento interno */
+            border: none; /* Remove bordas padrão */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Cursor de ponteiro */
+            text-transform: uppercase; /* Deixa o texto em maiúsculas */
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            text-decoration: none; /* Remove sublinhado */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito suave */
+            display: block; /* Garantir centralização */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            text-align: center; /* Alinha texto no centro */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+        }
+        
+        /* Efeito de hover no botão */
+        .primary:hover {
+            background-color: #c02f83; /* Cor mais escura no hover */
+            transform: scale(1.05); /* Leve aumento ao passar o mouse */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+        }
+        
+        
+        
+        .modal-content {
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+            background-color: #ffffff; /* Fundo branco */
+            padding: 20px; /* Espaçamento interno */
+        }
+        
+        .modal-header {
+            border: none; /* Remove borda no topo */
+            padding-bottom: 0; /* Remove espaçamento extra */
+        }
+        
+        .modal-title {
+            color: #e43798; /* Destaque rosa */
+            font-weight: bold; /* Título mais chamativo */
+            font-size: 1.5em; /* Aumenta o tamanho do título */
+            margin-bottom: 10px; /* Pequeno espaço antes do texto */
+        }
+        
+        .modal-body {
+            font-size: 1rem; /* Texto legível */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            color: #333; /* Cor do texto */
+            padding: 0; /* Remove espaçamento interno extra */
+        }
+        
+        .modal-footer {
+            display: flex; /* Layout flexível */
+            justify-content: space-between; /* Botões nas extremidades */
+            align-items: center; /* Centraliza verticalmente */
+            margin-top: 10px; /* Pequeno espaço entre texto e rodapé */
+            padding: 0; /* Remove padding extra */
+            border-top: none; /* Remove linha divisória no rodapé */
+        }
+        
+        /* Estilo para o botão personalizado */
+        .primary{
+            text-decoration: none;
+            background-color: #e43798; /* Rosa elegante */
+            color: white; /* Cor do texto */
+            font-size: 1rem; /* Tamanho do texto */
+            padding: 10px 20px; /* Espaçamento interno */
+            border: none; /* Remove bordas padrão */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Cursor de ponteiro */
+            text-transform: uppercase; /* Deixa o texto em maiúsculas */
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            text-decoration: none; /* Remove sublinhado */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito suave */
+            display: block; /* Garantir centralização */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            text-align: center; /* Alinha texto no centro */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+        }
+        
+        /* Efeito de hover no botão */
+        .primary:hover {
+            background-color: #c02f83; /* Cor mais escura no hover */
+            transform: scale(1.05); /* Leve aumento ao passar o mouse */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+        }
+        
+        
+        .testando {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Garante o espaçamento entre as colunas */
+        }
+        
+        .topicosum, .topicosdois {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .icone {
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+        }
+        
+        .text {
+            margin-bottom: 10px; /* Espaço entre as palavras */
+            margin-right: 20px; /* Adiciona espaçamento entre as palavras na mesma linha */
+        }
+        
+        .topicosum .icone,
+        .topicosum .text {
+            display: flex;
+            flex-direction: column; /* Organiza o ícone e a palavra em coluna */
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .topicosdois .icone,
+        .topicosdois .text {
+            display: flex;
+            flex-direction: column; /* Organiza o ícone e a palavra em coluna */
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        /* Alinha o ícone de "LOCALIZAÇÃO" e a palavra "QUALIDADE" na segunda linha */
+        .topicosdois {
+            margin-top: 10px;
+        }
+        
+        .topicoum, .topicotres, .topicodois, .topicoquatro {
+            font-size: 16px;
+            margin-right: 20px; /* Adiciona espaço entre as palavras */
+        }
+        
+        /* Estilizando o ícone e o texto para ficarem na mesma linha */
+        .iconee, .textt {
+            display: inline-flex; /* Exibe os elementos em linha */
+            align-items: center;  /* Alinha o conteúdo verticalmente ao centro */
+            margin-right: 10px;    /* Espaço entre o ícone e o texto */
+        }
+        
+        
+        .topicocinco {
+            margin: 0;  /* Remove margem extra que o h5 pode ter por padrão */
+        }
+        .frase {
+            margin-top: 5px; /* Espaçamento entre o texto "Produtos" e o parágrafo */
+            margin-left: 25px; /* Ajusta o alinhamento do texto se necessário */
+            display: flex;
+        }
+        
+        .topicoss{
+           margin: 40px;
+        }
+        
+        .iconee{
+            color: #000000;
+        }
+        .banner{
+            background-color:#FCCAD1;
+            display: flex;  /* Organiza o conteúdo em linha */
+            
+           
+        }
+        .porra{
+            padding: 50px 0;
+            
+            width: 100%;
+            
+           
+           
+        }
+        
+        .imgdois{
+            width: 490px;
+            padding: 30px 0;
+            
+        }
+        
+        .tituloquatro,
+        .titulocinco,
+        .textoquatro,
+        .topicoss {
+            margin-bottom: 15px;  /* Espaçamento entre os blocos de texto */
+            
+        }
+        
+        .tituloquatro{
+            color: #8E94A2;
+            margin: 20px ; 
+        }
+        
+        .titulocinco{
+            margin: 20px ;
+        }
+        
+        .linhas-duas-coress {
+            border: none;                               /* Remove a borda padrão */
+            height: 2px;                                /* Espessura da linha */
+            background: linear-gradient(to right, 
+                        #000000 50%, #a0a0a0 50%);      /* Gradiente com preto e cinza */
+            width: 48px;                                 /* Largura da linha (ajuste conforme necessário) */
+            margin: 20px ;                          /* Centraliza a linha horizontalmente */
+        }
+        .linha-solidas {
+            display: flex;
+            width: 70px;        /* Largura total da linha */
+            height: 2px;        /* Espessura da linha */
+            margin: 20px;
+        }
+        
+        .metade-pretas {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .metade-brancas {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: #eedadd;
+        }
+        
+        
+        .textoquatro{
+            margin:  40px ;
+            font-weight: 500;
+        }
+        
+        .highlight-btn {
+            display: inline-block; /* Trata o link como botão */
+            background-color: #e43798; /* Fundo rosa escuro */
+            color: #ffffff; /* Texto branco para contraste */
+            text-decoration: none; /* Remove o sublinhado */
+            padding: 12px 24px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            font-size: 18px; /* Texto maior para destaque */
+            font-weight: bold; /* Texto em negrito */
+            text-align: center; /* Centraliza o texto */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para realce */
+            border: 2px solid #e43798; /* Borda combinando com o fundo */
+            transition: all 0.3s ease; /* Animação suave ao passar o mouse */
+            margin: 40px;
+        }
+        
+        .highlight-btn:hover {
+            background-color: #FCCAD1; /* Altera o fundo ao passar o mouse */
+            color: #e43798; /* Texto rosa escuro no hover */
+            border: 2px solid #e43798; /* Borda permanece */
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+            transform: translateY(-2px); /* Elevação sutil */
+        }
+        
+        .acompanhe{
+            padding:204px 0 ;
+        }
+        .nos{
+            justify-content: center;
+            text-align: center;
+            color: #8e94a2;
+            
+        }
+        
+        .siga{
+            text-align: center;
+        }
+        
+        .imagens{
+           display: flex; 
+           margin: 0;
+        }
+        
+        .imgum{
+            width: 150px;
+        }
+        
+        
+        .imgtres{
+            width: 150px;
+        }
+        
+        
+        
+        .imgcinco{
+            width: 150px;
+        }
+        
+        .imgseis{
+            width: 150px;
+        }
+        
+        .imgsete{
+            width: 150px;
+        }
+        
+        .imgoito{
+            width: 150px;
+        }
+        
+        .imgnove{
+            width: 150px;
+        }
+        
+        .imagens {
+            display: flex;
+            justify-content: center; /* Centraliza as imagens */
+        }
+        
+        .imagem-container {
+            display: inline-block;
+            position: relative; /* Necessário para posicionar o ícone */
+            overflow: hidden;   /* Garante que o zoom não ultrapasse os limites */
+            width: 150px;       /* Largura padrão das imagens */
+            height: 150px;      /* Altura padrão das imagens */
+        }
+        
+        .imagem-container img {
+            width: 100%;        /* Ajusta o tamanho da imagem ao contêiner */
+            height: 100%;       /* Preenche o contêiner */
+            object-fit: cover;  /* Garante que a imagem seja cortada proporcionalmente */
+            transition: transform 0.3s ease; /* Efeito de transição suave para o zoom */
+        }
+        
+        .imagem-container:hover img {
+            transform: scale(1.2); /* Aplica o zoom na imagem ao passar o mouse */
+        }
+        
+        .icone-instagram {
+            position: absolute; /* Para posicionar o ícone dentro do contêiner */
+            bottom: 10px;       /* Distância da borda inferior */
+            right: 10px;        /* Distância da borda direita */
+            padding: 5px 8px;   /* Espaçamento interno */
+            border-radius: 5px; /* Cantos arredondados */
+            color: white;       /* Cor do ícone */
+            font-size: 18px;    /* Tamanho do ícone */
+            display: flex;      /* Centraliza o ícone */
+            align-items: center;
+            justify-content: center;
+            opacity: 0;         /* Oculta o ícone inicialmente */
+            transition: opacity 0.3s ease; /* Transição suave de visibilidade */
+        }
+        
+        .imagem-container:hover .icone-instagram {
+            opacity: 1; /* Exibe o ícone ao passar o mouse */
+        }
+        
+        .la {
+            position: relative; /* Necessário para posicionar o botão em relação ao contêiner */
+            
+        }
+        
+        /* Botão em cima das imagens */
+        
+        .highlight-btn:hover {
+            background-color: #FCCAD1; /* Altera o fundo ao passar o mouse */
+            color: #e43798; /* Texto rosa escuro no hover */
+            border: 2px solid #e43798; /* Borda permanece */
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+            transform: translateY(-2px); /* Elevação sutil */
+        }
+        .botao-cima {
+            background-color:#e43798 ;
+            border: none;
+            text-decoration: none;
+            position: absolute; /* Faz o botão ficar sobre as imagens */
+            top: 50px; /* Distância do botão para as imagens */
+            left: 50%; /* Centraliza o botão horizontalmente */
+            transform: translateX(-50%); /* Ajuste para garantir que o botão fique exatamente no meio */
+            transition: all 0.3s ease; /* Animação suave ao passar o mouse */
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            
+            cursor: pointer;
+            z-index: 10; /* Garante que o botão fique acima das imagens */
+        }
+        
+        .botao-cima :hover{
+            text-decoration: none;
+            background-color: #fccad1;
+            cursor: pointer;
+        }
+        .sigaa{
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        
+        
+        
+        .iconefim {
+            font-size: 30px;
+            display: flex;
+            justify-content: center; /* Alinha o ícone no centro */
+            align-items: center; /* Alinha o ícone verticalmente */
+            width: 1.5em; /* Define a largura com base no tamanho da fonte */
+            height: 1.5em; /* Define a altura com base no tamanho da fonte */
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+            border: 2px solid black; /* Borda preta (ajuste a espessura conforme necessário) */
+            border-radius: 6px; /* Bordas quadradas com arredondamento */
+            flex-shrink: 0; /* Impede que o ícone encolha */
+        }
+        
+        .contato {
+            padding: 50px 0;
+            display: flex; /* Aplica o layout flex para alinhar todos os itens na mesma linha */
+            justify-content: space-between; /* Espaço entre as divs de contato */
+            
+            flex-direction: row; /* Alinha todos os elementos na mesma linha */
+        }
+        
+        .contato-container {
+            flex-direction: column; /* Coloca o <h5> em cima do <p> */
+            align-items: center; /* Alinha o ícone e o texto verticalmente */
+            
+            margin-bottom: 20px; /* Espaço entre as seções */
+            display: flex;
+            align-items: flex-start; /* Alinha os itens no topo */
+           
+        }
+        
+        .frasedectt {
+            padding: 1px 0;
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.5;
+            flex-direction: column;
+             word-wrap: break-word; /* Quebra as palavras longas ou excedentes para a linha de baixo */
+            overflow-wrap: break-word; /* Garante que palavras longas sejam quebradas na linha */
+        
+        }
+        
+        
+        .frasedectt p {
+            font-size: 20px;
+            margin-top: 5px;
+            
+        }
+        
+        .ta{
+            display: flex;
+            margin: 10px;
+        }
+        
+        .linh-solid {
+            display: flex;
+            width: 70px;        /* Largura total da linha */
+            height: 2px;        /* Espessura da linha */
+            margin: 20px;
+        }
+        
+        .metad-preta {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: rgb(0, 0, 0);
+        }
+        
+        .metad-branca {
+            flex: 1;            /* Ocupa 50% da largura */
+            background-color: #afafaf;
+        }
+        
+        .footer{
+            background-color: #fccad1;
+            display: flex;
+            justify-content: center; /* Alinha horizontalmente no centro */
+            align-items: center; /* Alinha verticalmente no centro */
+            
+        }
+        
+        .imgfooter{
+            height: 100px;
+            display: flex;
+            justify-content: center; /* Alinha horizontalmente no centro */
+            align-items: center; /* Alinha verticalmente no centro */
+        }
+        
+        
 
-    .footer {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .imagem-container {
-        width: 100%;
-        margin: 5px 0;
-    }
 }
-
-/* Estilos para telas de alta resolução (dispositivos com telas de retina) - telas com densidade de pixels maior que 192dpi */
-@media only screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .container {
-        padding: 25px;
-    }
-
-    .menu a {
-        font-size: 18px;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero p {
-        font-size: 20px;
-    }
-
-    .card {
-        width: 22%;
-    }
-
-    .custom-button {
-        padding: 12px 20px;
-    }
-}
-
-/* Estilos para telas de ultra largura (monitores widescreen ou ultrawide) - telas de 1440px ou mais */
-@media (min-width: 1440px) {
-    .container {
-        padding: 40px;
-    }
-
-    .card {
-        width: 20%;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-    .hero p {
-        font-size: 22px;
-    }
-}
-
 
 
 
